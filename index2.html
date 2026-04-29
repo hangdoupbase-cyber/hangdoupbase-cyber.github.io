@@ -1,0 +1,1371 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio cá nhân của Đỗ Thị Hằng - Digital Marketing Specialist (Meta Ads, TikTok Ads, Shopee Ads)." />
+  <title>Đỗ Thị Hằng | Digital Marketing Specialist</title>
+
+  <style>
+    :root{
+      --bg: #f7fffb;
+      --surface: rgba(255,255,255,.72);
+      --surface-strong: rgba(255,255,255,.92);
+      --text: #0f2a1d;
+      --muted: rgba(15,42,29,.72);
+
+      --primary: #1b8a5a;  /* xanh lá chủ đạo */
+      --primary-2:#31c37b; /* xanh nhấn */
+      --ring: rgba(49,195,123,.35);
+
+      --border: rgba(17, 93, 59, .14);
+      --shadow: 0 18px 50px rgba(16, 56, 37, .12);
+
+      --radius-xl: 24px;
+      --radius-lg: 18px;
+      --radius-md: 14px;
+
+      --container: 1120px;
+
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+
+    *{ box-sizing: border-box; }
+    html{ scroll-behavior: smooth; }
+    body{
+      margin: 0;
+      font-family: var(--font);
+      background:
+        radial-gradient(900px 500px at 15% -10%, rgba(49,195,123,.18), transparent 60%),
+        radial-gradient(700px 420px at 85% 0%, rgba(27,138,90,.14), transparent 55%),
+        radial-gradient(600px 450px at 10% 80%, rgba(49,195,123,.10), transparent 55%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      overflow-x: hidden;
+    }
+
+    a{ color: inherit; text-decoration: none; }
+    img{ max-width: 100%; display: block; }
+
+    /* Top Navigation */
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      background: rgba(247, 255, 251, .62);
+      border-bottom: 1px solid rgba(17, 93, 59, .10);
+    }
+    .topbar-inner{
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+    .brand{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 200px;
+    }
+    .logo{
+      width: 36px; height: 36px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(49,195,123,.95), rgba(27,138,90,.95));
+      box-shadow: 0 10px 30px rgba(27,138,90,.25);
+      position: relative;
+      overflow: hidden;
+    }
+    .logo:before{
+      content:"";
+      position:absolute; inset: -20%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.75), transparent 45%);
+      transform: rotate(12deg);
+    }
+    .brand-title{
+      display: flex;
+      flex-direction: column;
+      line-height: 1.15;
+    }
+    .brand-title strong{
+      font-size: 14px;
+      letter-spacing: .2px;
+    }
+    .brand-title span{
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .nav{
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+    .nav a{
+      font-size: 13px;
+      color: rgba(15,42,29,.75);
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      transition: background .2s ease, border-color .2s ease, transform .2s ease;
+      white-space: nowrap;
+    }
+    .nav a:hover{
+      background: rgba(49,195,123,.10);
+      border-color: rgba(49,195,123,.25);
+      transform: translateY(-1px);
+    }
+
+    /* Layout */
+    .container{
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+    section{
+      padding: 72px 0;
+    }
+    @media (max-width: 720px){
+      section{ padding: 56px 0; }
+      .brand{ min-width: 0; }
+    }
+
+    /* Reveal animations on scroll */
+    [data-reveal]{
+      opacity: 0;
+      transform: translateY(18px) scale(.99);
+      transition: opacity .65s ease, transform .65s ease;
+      will-change: opacity, transform;
+    }
+    .reveal-visible{
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    /* Hero */
+    .hero{
+      padding: 54px 0 26px;
+    }
+    .hero-grid{
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 20px;
+      align-items: center;
+    }
+    @media (max-width: 920px){
+      .hero-grid{ grid-template-columns: 1fr; }
+    }
+
+    .hero-card{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-card:after{
+      content:"";
+      position:absolute; inset: -1px;
+      background:
+        radial-gradient(700px 300px at 15% 15%, rgba(49,195,123,.18), transparent 60%),
+        radial-gradient(500px 260px at 90% 10%, rgba(27,138,90,.15), transparent 58%);
+      pointer-events: none;
+    }
+    .hero-card > *{ position: relative; z-index: 1; }
+
+    .kicker{
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      padding: 7px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(49,195,123,.28);
+      background: rgba(49,195,123,.10);
+      color: rgba(15,42,29,.82);
+      font-size: 13px;
+      margin-bottom: 14px;
+    }
+    .kicker svg{ flex: 0 0 auto; }
+
+    .hero h1{
+      margin: 0 0 12px;
+      font-size: clamp(34px, 5vw, 52px);
+      line-height: 1.08;
+      letter-spacing: -0.7px;
+    }
+    .hero h1 .accent{
+      color: var(--primary);
+      text-shadow: 0 12px 32px rgba(27,138,90,.12);
+    }
+
+    .hero .title{
+      font-size: clamp(16px, 2.2vw, 20px);
+      color: rgba(15,42,29,.78);
+      font-weight: 600;
+      margin: 0 0 10px;
+    }
+    .hero .tagline{
+      margin: 0 0 18px;
+      color: var(--muted);
+      max-width: 60ch;
+      font-size: 15px;
+    }
+
+    .cta-row{
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+      border: 1px solid transparent;
+      transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease;
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+    }
+    .btn-primary{
+      background: linear-gradient(135deg, var(--primary-2), var(--primary));
+      color: white;
+      box-shadow: 0 18px 45px rgba(27,138,90,.22);
+    }
+    .btn-primary:hover{ transform: translateY(-1px); box-shadow: 0 22px 60px rgba(27,138,90,.26); }
+    .btn-ghost{
+      background: rgba(255,255,255,.6);
+      border-color: rgba(17, 93, 59, .18);
+      color: rgba(15,42,29,.88);
+    }
+    .btn-ghost:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.82);
+      border-color: rgba(49,195,123,.35);
+      box-shadow: 0 16px 40px rgba(16, 56, 37, .10);
+    }
+
+    /* Hero side panel */
+    .side{
+      display: grid;
+      gap: 12px;
+    }
+    .mini-card{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      box-shadow: 0 14px 40px rgba(16, 56, 37, .08);
+    }
+    .mini-card h3{
+      margin: 0 0 8px;
+      font-size: 14px;
+      color: rgba(15,42,29,.88);
+      letter-spacing: .2px;
+    }
+    .mini-card p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .metric-row{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .metric{
+      background: rgba(255,255,255,.62);
+      border: 1px solid rgba(17, 93, 59, .14);
+      border-radius: 14px;
+      padding: 10px 10px;
+    }
+    .metric strong{ display:block; font-size: 14px; }
+    .metric span{ display:block; font-size: 12px; color: rgba(15,42,29,.66); margin-top: 2px; }
+
+    /* Section headers */
+    .section-head{
+      display: grid;
+      gap: 8px;
+      margin-bottom: 18px;
+      align-items: start;
+    }
+    .section-eyebrow{
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(15,42,29,.78);
+      font-size: 13px;
+      letter-spacing: .2px;
+    }
+    .section-eyebrow .dot{
+      width: 9px; height: 9px;
+      border-radius: 99px;
+      background: linear-gradient(135deg, var(--primary-2), var(--primary));
+      box-shadow: 0 10px 20px rgba(27,138,90,.18);
+    }
+    .section-title{
+      margin: 0;
+      font-size: clamp(22px, 3.1vw, 30px);
+      letter-spacing: -0.4px;
+    }
+    .section-sub{
+      margin: 0;
+      color: var(--muted);
+      max-width: 70ch;
+      font-size: 14px;
+    }
+
+    /* About */
+    .about-grid{
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 18px;
+      align-items: start;
+    }
+    @media (max-width: 920px){
+      .about-grid{ grid-template-columns: 1fr; }
+    }
+    .about-box{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 22px;
+      box-shadow: 0 14px 40px rgba(16, 56, 37, .07);
+    }
+    .about-box p{
+      margin: 0;
+      color: rgba(15,42,29,.80);
+      font-size: 14.5px;
+    }
+    .about-highlights{
+      display: grid;
+      gap: 10px;
+    }
+    .pill{
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      padding: 14px;
+      border-radius: var(--radius-lg);
+      background: rgba(255,255,255,.62);
+      border: 1px solid rgba(17, 93, 59, .14);
+    }
+    .pill svg{ flex: 0 0 auto; margin-top: 2px; }
+    .pill strong{
+      display:block;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+    .pill span{
+      display:block;
+      font-size: 12.8px;
+      color: rgba(15,42,29,.70);
+    }
+
+    /* Skills */
+    .skills-wrap{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 22px;
+      box-shadow: 0 14px 40px rgba(16, 56, 37, .07);
+    }
+    .skills-grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 720px){
+      .skills-grid{ grid-template-columns: 1fr; }
+    }
+
+    .skill{
+      background: rgba(255,255,255,.62);
+      border: 1px solid rgba(17, 93, 59, .12);
+      border-radius: var(--radius-lg);
+      padding: 14px 14px 12px;
+    }
+    .skill-top{
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    .skill label{
+      font-weight: 800;
+      font-size: 13.5px;
+      letter-spacing: .1px;
+    }
+    .skill .pct{
+      font-size: 12px;
+      color: rgba(15,42,29,.65);
+      font-weight: 800;
+    }
+
+    .skill-bar{
+      height: 10px;
+      background: rgba(27,138,90,.10);
+      border-radius: 999px;
+      overflow: hidden;
+      border: 1px solid rgba(27,138,90,.16);
+    }
+    .skill-bar span{
+      display: block;
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, rgba(49,195,123,.95), rgba(27,138,90,.95));
+      border-radius: 999px;
+      transition: width 900ms cubic-bezier(.2,.9,.2,1);
+    }
+
+    .skills-animate .skill-bar span{
+      width: var(--p, 80%);
+    }
+
+    /* Projects */
+    .projects-grid{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 980px){
+      .projects-grid{ grid-template-columns: 1fr; }
+    }
+
+    .card{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 18px;
+      box-shadow: 0 16px 45px rgba(16, 56, 37, .08);
+      display: grid;
+      gap: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background: radial-gradient(460px 180px at 20% 0%, rgba(49,195,123,.18), transparent 55%);
+      pointer-events: none;
+      opacity: .9;
+    }
+    .card > *{ position: relative; z-index: 1; }
+
+    .card-head{
+      display:flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .tag{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.64);
+      border: 1px solid rgba(17, 93, 59, .14);
+      color: rgba(15,42,29,.82);
+      font-size: 12.5px;
+      font-weight: 900;
+      letter-spacing: .15px;
+    }
+    .tag svg{ opacity: .95; }
+
+    .card h3{
+      margin: 0;
+      font-size: 16px;
+      letter-spacing: -0.2px;
+    }
+    .card p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 13.5px;
+    }
+
+    .results{
+      display: grid;
+      gap: 10px;
+      margin-top: 6px;
+    }
+    .result{
+      background: rgba(255,255,255,.62);
+      border: 1px solid rgba(17, 93, 59, .12);
+      border-radius: var(--radius-lg);
+      padding: 12px;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 12px;
+    }
+    .result strong{
+      font-size: 14px;
+      letter-spacing: .1px;
+    }
+    .result span{
+      color: rgba(15,42,29,.70);
+      font-weight: 900;
+      font-size: 13px;
+      text-align: right;
+    }
+
+    .card-footer{
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 4px;
+    }
+    .proof{
+      font-size: 12px;
+      color: rgba(15,42,29,.68);
+      display:flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .proof svg{ opacity: .9; }
+
+    /* Tools */
+    .tools-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 980px){
+      .tools-grid{ grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px){
+      .tools-grid{ grid-template-columns: 1fr; }
+    }
+    .tool{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 16px;
+      box-shadow: 0 14px 40px rgba(16, 56, 37, .07);
+      display:flex;
+      gap: 12px;
+      align-items: flex-start;
+      min-height: 92px;
+    }
+    .tool .icon{
+      width: 38px; height: 38px;
+      border-radius: 14px;
+      background: rgba(49,195,123,.12);
+      border: 1px solid rgba(49,195,123,.28);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex: 0 0 auto;
+    }
+    .tool strong{
+      display:block;
+      font-size: 14px;
+      margin-bottom: 3px;
+      letter-spacing: .1px;
+    }
+    .tool span{
+      display:block;
+      color: rgba(15,42,29,.70);
+      font-size: 12.8px;
+    }
+
+    /* Contact */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 18px;
+      align-items: start;
+    }
+    @media (max-width: 920px){
+      .contact-grid{ grid-template-columns: 1fr; }
+    }
+
+    .contact-box{
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 22px;
+      box-shadow: 0 14px 40px rgba(16, 56, 37, .07);
+    }
+    .contact-box h3{
+      margin: 0 0 10px;
+      font-size: 16px;
+    }
+    .contact-box p{
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 70ch;
+    }
+
+    .contact-actions{
+      display:flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .contact-item{
+      display:flex;
+      gap: 12px;
+      align-items: center;
+      padding: 12px 12px;
+      border-radius: var(--radius-lg);
+      border: 1px solid rgba(17, 93, 59, .12);
+      background: rgba(255,255,255,.62);
+      margin-top: 12px;
+    }
+    .contact-item svg{ opacity: .92; }
+    .contact-item strong{
+      display:block; font-size: 13.5px; margin-bottom: 2px;
+    }
+    .contact-item span{
+      display:block; color: rgba(15,42,29,.70); font-weight: 900; font-size: 13px;
+    }
+
+    .social-row{
+      display:flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+    .social{
+      width: 44px; height: 44px;
+      border-radius: 16px;
+      border: 1px solid rgba(17, 93, 59, .14);
+      background: rgba(255,255,255,.62);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transition: transform .2s ease, background .2s ease, border-color .2s ease;
+    }
+    .social:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.85);
+      border-color: rgba(49,195,123,.35);
+    }
+
+    /* Footer */
+    footer{
+      padding: 28px 0 40px;
+      color: rgba(15,42,29,.65);
+      font-size: 13px;
+    }
+    .footer-inner{
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 18px;
+      display:flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      border-top: 1px solid rgba(17, 93, 59, .10);
+      padding-top: 16px;
+    }
+
+    /* Accessibility helper */
+    .sr-only{
+      position:absolute;
+      width:1px; height:1px;
+      padding:0; margin:-1px;
+      overflow:hidden; clip:rect(0,0,0,0);
+      white-space:nowrap; border:0;
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      html{ scroll-behavior: auto; }
+      [data-reveal]{
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+      .skill-bar span{ transition: none; }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Top navigation (UX helper, anchors only; no backend needed) -->
+  <div class="topbar" role="navigation" aria-label="Điều hướng">
+    <div class="topbar-inner">
+      <a class="brand" href="#top" aria-label="Về đầu trang">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="brand-title">
+          <strong>Đỗ Thị Hằng</strong>
+          <span>Digital Marketing Specialist</span>
+        </div>
+      </a>
+
+      <div class="nav">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#tools">Tools</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <main id="top">
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-card" data-reveal>
+            <div class="kicker">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7z" stroke="rgba(15,42,29,.8)" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+              Health & Beauty Performance Marketing
+            </div>
+
+            <h1>
+              Đỗ Thị <span class="accent">Hằng</span>
+            </h1>
+
+            <p class="title">Digital Marketing Specialist</p>
+
+            <p class="tagline">Performance-driven Digital Marketer in Health&Beauty Industry</p>
+
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#contact">
+                Contact me
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M7 17L17 7" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M9 7H17V15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+
+              <a class="btn btn-ghost" href="#projects">
+                View projects
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 5v14" stroke="rgba(15,42,29,.85)" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M19 12H5" stroke="rgba(15,42,29,.85)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <aside class="side">
+            <div class="mini-card" data-reveal>
+              <h3>Định vị năng lực</h3>
+              <p>Tập trung tối ưu ROAS/CPA, phân bổ ngân sách theo dữ liệu, & cải tiến creative/landing để tăng trưởng bền vững.</p>
+
+              <div class="metric-row" aria-label="Điểm mạnh nhanh">
+                <div class="metric">
+                  <strong>Meta</strong>
+                  <span>Ads & Funnel</span>
+                </div>
+                <div class="metric">
+                  <strong>TikTok</strong>
+                  <span>Creative Testing</span>
+                </div>
+                <div class="metric">
+                  <strong>Shopee</strong>
+                  <span>Performance</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mini-card" data-reveal>
+              <h3>Ngành trọng tâm</h3>
+              <p>Health, Healthcare, Thực phẩm chức năng, Mỹ phẩm, Sức khỏe.</p>
+              <p style="margin-top:10px;">Sẵn sàng hỗ trợ ứng tuyển hoặc cung cấp thông tin để gửi khách hàng.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section id="about">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div class="section-eyebrow">
+            <span class="dot" aria-hidden="true"></span>
+            About me
+          </div>
+          <h2 class="section-title">Tối ưu doanh thu bằng Performance Marketing</h2>
+          <p class="section-sub">Tôi là Digital Marketer chuyên chạy Ads cho ngành Health&Beauty. Mục tiêu của tôi là tăng trưởng doanh thu và tối ưu chi phí dựa trên dữ liệu thực tế.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-box" data-reveal>
+            <p>
+              Tôi có kinh nghiệm chạy quảng cáo trong ngành Health, tập trung vào việc tăng trưởng doanh thu và tối ưu chi phí.
+              Tôi thường xuyên theo dõi & phân tích hiệu quả theo từng giai đoạn phễu (awareness → consideration → conversion),
+              kết hợp testing creative/copy, tối ưu cấu trúc campaign và cải tiến landing page để nâng ROAS và giảm CPA.
+              Thành thạo các kênh Meta Ads, TikTok Ads, Shopee Ads.
+            </p>
+          </div>
+
+          <div class="about-highlights" data-reveal>
+            <div class="pill">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 19V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v14" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round"/>
+                <path d="M8 7h8" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round"/>
+                <path d="M8 11h8" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round"/>
+                <path d="M8 15h5" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <strong>Phân tích & tối ưu</strong>
+                <span>Ưu tiên insight hành vi người dùng, tối ưu theo mục tiêu kinh doanh.</span>
+              </div>
+            </div>
+
+            <div class="pill">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7z" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <strong>Creative testing nhanh</strong>
+                <span>Thử nghiệm thông điệp, format, hook để cải thiện tỉ lệ chuyển đổi.</span>
+              </div>
+            </div>
+
+            <div class="pill">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M3 12h18" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round"/>
+                <path d="M7 8l-4 4 4 4" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17 8l4 4-4 4" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <strong>Landing page optimization</strong>
+                <span>Tập trung giảm ma sát, tăng relevancy & tốc độ ra quyết định.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div class="section-eyebrow">
+            <span class="dot" aria-hidden="true"></span>
+            Skills
+          </div>
+          <h2 class="section-title">Năng lực triển khai Ads & tối ưu hiệu suất</h2>
+          <p class="section-sub">Một số kỹ năng chính của tôi. Bạn có thể chỉnh lại phần trăm (mức độ) theo thực tế của bạn trong code.</p>
+        </div>
+
+        <div class="skills-wrap" id="skillsWrap" data-reveal>
+          <div class="skills-grid" id="skillsGrid">
+            <!-- Lưu ý: phần trăm là giá trị mẫu để hiển thị progress bar. -->
+            <div class="skill" style="--p:92%">
+              <div class="skill-top">
+                <label>Meta Ads</label>
+                <div class="pct">92%</div>
+              </div>
+              <div class="skill-bar" aria-hidden="true"><span></span></div>
+            </div>
+
+            <div class="skill" style="--p:88%">
+              <div class="skill-top">
+                <label>TikTok Ads</label>
+                <div class="pct">88%</div>
+              </div>
+              <div class="skill-bar" aria-hidden="true"><span></span></div>
+            </div>
+
+            <div class="skill" style="--p:85%">
+              <div class="skill-top">
+                <label>Shopee Ads</label>
+                <div class="pct">85%</div>
+              </div>
+              <div class="skill-bar" aria-hidden="true"><span></span></div>
+            </div>
+
+            <div class="skill" style="--p:90%">
+              <div class="skill-top">
+                <label>Performance Marketing</label>
+                <div class="pct">90%</div>
+              </div>
+              <div class="skill-bar" aria-hidden="true"><span></span></div>
+            </div>
+
+            <div class="skill" style="--p:82%">
+              <div class="skill-top">
+                <label>Data Analysis</label>
+                <div class="pct">82%</div>
+              </div>
+              <div class="skill-bar" aria-hidden="true"><span></span></div>
+            </div>
+
+            <div class="skill" style="--p:80%">
+              <div class="skill-top">
+                <label>Content Strategy</label>
+                <div class="pct">80%</div>
+              </div>
+              <div class="skill-bar" aria-hidden="true"><span></span></div>
+            </div>
+
+            <div class="skill" style="--p:84%">
+              <div class="skill-top">
+                <label>Conversion Optimization</label>
+                <div class="pct">84%</div>
+              </div>
+              <div class="skill-bar" aria-hidden="true"><span></span></div>
+            </div>
+
+            <div class="skill" style="--p:86%">
+              <div class="skill-top">
+                <label>Landing Page Optimization</label>
+                <div class="pct">86%</div>
+              </div>
+              <div class="skill-bar" aria-hidden="true"><span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION (Quan trọng nhất) -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div class="section-eyebrow">
+            <span class="dot" aria-hidden="true"></span>
+            Projects
+          </div>
+          <h2 class="section-title">Case studies ngành Health&Beauty</h2>
+          <p class="section-sub">Các project mẫu giúp bạn thể hiện năng lực thực chiến qua KPI (doanh thu, ROAS, CPA, tăng trưởng đơn/chi phí).</p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <article class="card" data-reveal>
+            <div class="card-head">
+              <div class="tag" title="Ngành">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7z" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+                Thực phẩm chức năng
+              </div>
+              <div class="tag" title="Kênh">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4 4h16v16H4z" stroke="rgba(27,138,90,.95)" stroke-width="2"/>
+                  <path d="M8 12h8" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12 8v8" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                Meta Ads
+              </div>
+            </div>
+
+            <h3>Hiệu quả tăng trưởng & tối ưu CPA</h3>
+            <p>Thiết kế chiến dịch theo phễu, tối ưu nhóm đối tượng và cải tiến creative để tăng doanh thu bền vững.</p>
+
+            <div class="results" aria-label="Kết quả dự án 1">
+              <div class="result">
+                <strong>Doanh thu</strong>
+                <span>450 triệu VNĐ</span>
+              </div>
+              <div class="result">
+                <strong>ROAS</strong>
+                <span>3.8</span>
+              </div>
+              <div class="result">
+                <strong>CPA giảm</strong>
+                <span>42%</span>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <div class="proof">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M20 6L9 17l-5-5" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Performance-first
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="card" data-reveal>
+            <div class="card-head">
+              <div class="tag" title="Ngành">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7z" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+                Mỹ phẩm chăm sóc da
+              </div>
+              <div class="tag" title="Kênh">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4 12a8 8 0 0 1 16 0" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12 12l3-6" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M9 20h6" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                TikTok Ads
+              </div>
+            </div>
+
+            <h3>Gia tăng reach & tối ưu chi phí/đơn</h3>
+            <p>Testing hook/format, tối ưu pacing và chuyển đổi dựa trên tín hiệu hành vi để giảm chi phí trên mỗi đơn.</p>
+
+            <div class="results" aria-label="Kết quả dự án 2">
+              <div class="result">
+                <strong>1.2 triệu lượt xem</strong>
+                <span>Reach mạnh</span>
+              </div>
+              <div class="result">
+                <strong>3.500 đơn hàng</strong>
+                <span>Conversion ổn định</span>
+              </div>
+              <div class="result">
+                <strong>Chi phí / đơn giảm</strong>
+                <span>35%</span>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <div class="proof">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M20 6L9 17l-5-5" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Creative testing
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="card" data-reveal>
+            <div class="card-head">
+              <div class="tag" title="Ngành">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M12 2l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7z" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+                Sản phẩm giảm cân
+              </div>
+              <div class="tag" title="Kênh">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4 7h16l-1 14H5L4 7z" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M9 10v8" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M15 10v8" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                Shopee Ads
+              </div>
+            </div>
+
+            <h3>Scaling doanh thu với ROAS cao</h3>
+            <p>Tối ưu từ khóa/nhóm sản phẩm, kiểm soát ngân sách & đo lường theo mục tiêu doanh thu để tăng trưởng nhanh.</p>
+
+            <div class="results" aria-label="Kết quả dự án 3">
+              <div class="result">
+                <strong>Doanh thu</strong>
+                <span>320 triệu VNĐ</span>
+              </div>
+              <div class="result">
+                <strong>Tăng trưởng</strong>
+                <span>65%</span>
+              </div>
+              <div class="result">
+                <strong>ROAS</strong>
+                <span>4.2</span>
+              </div>
+            </div>
+
+            <div class="card-footer">
+              <div class="proof">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M20 6L9 17l-5-5" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                Scaling strategy
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLS SECTION -->
+    <section id="tools">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div class="section-eyebrow">
+            <span class="dot" aria-hidden="true"></span>
+            Tools
+          </div>
+          <h2 class="section-title">Công cụ triển khai & đo lường</h2>
+          <p class="section-sub">Các nền tảng mà tôi thường dùng để chạy Ads, theo dõi dữ liệu và tối ưu.</p>
+        </div>
+
+        <div class="tools-grid">
+          <div class="tool" data-reveal>
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M4 4h16v16H4z" stroke="rgba(27,138,90,.95)" stroke-width="2"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Meta Ads Manager</strong>
+              <span>Campaign, targeting, optimization</span>
+            </div>
+          </div>
+
+          <div class="tool" data-reveal>
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M9 18V6h6v12" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round"/>
+                <path d="M9 12h6" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <strong>TikTok Ads Manager</strong>
+              <span>Creative testing & scaling</span>
+            </div>
+          </div>
+
+          <div class="tool" data-reveal>
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M6 7h12l-1 14H7L6 7z" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M9 7V4h6v3" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Google Analytics</strong>
+              <span>Tracking hành vi & attribution</span>
+            </div>
+          </div>
+
+          <div class="tool" data-reveal>
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M4 6h16v12H4z" stroke="rgba(27,138,90,.95)" stroke-width="2"/>
+                <path d="M8 10h8" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round"/>
+                <path d="M8 14h5" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Google Tag Manager</strong>
+              <span>Quản lý tags & event tracking</span>
+            </div>
+          </div>
+
+          <div class="tool" data-reveal>
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M4 19V5" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round"/>
+                <path d="M7 16l3-6 4 3 3-7" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Looker Studio</strong>
+              <span>Dashboard báo cáo dễ theo dõi</span>
+            </div>
+          </div>
+
+          <div class="tool" data-reveal>
+            <div class="icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M4 4h12l4 4v12H4V4z" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M16 4v4h4" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div>
+              <strong>Excel</strong>
+              <span>Reporting, budgeting & forecasting</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div class="section-eyebrow">
+            <span class="dot" aria-hidden="true"></span>
+            Contact
+          </div>
+          <h2 class="section-title">Liên hệ để ứng tuyển hoặc gửi khách hàng</h2>
+          <p class="section-sub">Bạn có thể liên hệ trực tiếp qua email hoặc gọi điện. Mình sẵn sàng trao đổi về chiến lược Ads, KPI và case cụ thể.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-box" data-reveal>
+            <h3>Thông tin liên hệ</h3>
+            <p>Phù hợp cho ứng tuyển vị trí Digital Marketing/Performance Marketing hoặc hợp tác chạy quảng cáo ngành Health&Beauty.</p>
+
+            <div class="contact-actions">
+              <a class="btn btn-primary" href="mailto:hangdo030201@gmail.com?subject=Portfolio%20Digital%20Marketing%20-%20%C4%90%E1%BB%97%20Th%E1%BB%8B%20H%E1%BA%B1ng">
+                Gửi email
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4 4h16v16H4z" stroke="white" stroke-width="2" />
+                  <path d="M4 7l8 6 8-6" stroke="white" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              </a>
+
+              <a class="btn btn-ghost" href="tel:0972261746" aria-label="Gọi điện">
+                Gọi ngay
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M22 16.9v3a2 2 0 0 1-2.2 2c-9.8-.8-17.3-8.3-18.1-18.1A2 2 0 0 1 3.7 1.6h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L7.1 9.9c1.5 2.7 3.8 5 6.5 6.5l1.9-1.9a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z" stroke="rgba(15,42,29,.85)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+
+            <div class="contact-item" aria-label="Email">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M4 4h16v16H4z" stroke="rgba(27,138,90,.95)" stroke-width="2"/>
+                <path d="M4 7l8 6 8-6" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <strong>Email</strong>
+                <span>hangdo030201@gmail.com</span>
+              </div>
+            </div>
+
+            <div class="contact-item" aria-label="Số điện thoại">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M22 16.9v3a2 2 0 0 1-2.2 2c-9.8-.8-17.3-8.3-18.1-18.1A2 2 0 0 1 3.7 1.6h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.4 2.1L7.1 9.9c1.5 2.7 3.8 5 6.5 6.5l1.9-1.9a2 2 0 0 1 2.1-.4c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <strong>Phone</strong>
+                <span>0972261746</span>
+              </div>
+            </div>
+
+            <div class="social-row" aria-label="Mạng xã hội">
+              <!-- Icon mạng xã hội (link mặc định, bạn có thể thay handle/URL sau) -->
+              <a class="social" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4 4h16v16H4z" stroke="rgba(27,138,90,.95)" stroke-width="2"/>
+                  <path d="M8 11v6" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M8 8.5v.5" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12 17v-3.2c0-1.8 2-2 2-0.2V17" stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+
+              <a class="social" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4 4h16v16H4z" stroke="rgba(27,138,90,.95)" stroke-width="2"/>
+                  <path d="M14 10h2V7h-2c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2l1-3h-3v-2c0-.6.4-1 1-1z"
+                        stroke="rgba(27,138,90,.95)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+                </svg>
+              </a>
+
+              <a class="social" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M7 4h10a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V7a3 3 0 0 1 3-3z" stroke="rgba(27,138,90,.95)" stroke-width="2"/>
+                  <path d="M12 11.5a2.5 2.5 0 1 0 0 .01z" stroke="rgba(27,138,90,.95)" stroke-width="2"/>
+                  <path d="M17.5 6.5h.01" stroke="rgba(27,138,90,.95)" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-box" data-reveal>
+            <h3>Gợi ý nội dung khi liên hệ</h3>
+            <p>Để trao đổi nhanh, bạn có thể gửi kèm các thông tin sau (dán copy cũng được).</p>
+
+            <div class="results" aria-label="Mẫu nội dung">
+              <div class="result">
+                <strong>1) Mục tiêu</strong>
+                <span>Tăng doanh thu / giảm CPA</span>
+              </div>
+              <div class="result">
+                <strong>2) Kênh</strong>
+                <span>Meta / TikTok / Shopee</span>
+              </div>
+              <div class="result">
+                <strong>3) Thời gian & ngân sách</strong>
+                <span>Scope thử nghiệm</span>
+              </div>
+              <div class="result">
+                <strong>4) Landing / tracking</strong>
+                <span>GA4/TGTM/UTM sẵn sàng</span>
+              </div>
+            </div>
+
+            <div style="margin-top:14px;">
+              <a class="btn btn-ghost" href="#projects">
+                Xem KPI mẫu
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M7 17L17 7" stroke="rgba(15,42,29,.85)" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M9 7H17V15" stroke="rgba(15,42,29,.85)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-inner">
+        <div>© <span id="year"></span> Đỗ Thị Hằng. Digital Marketing Specialist.</div>
+        <div>Built for GitHub Pages • One-file `index.html`</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Animation nhẹ khi scroll (IntersectionObserver) + progress bar khi vào viewport
+    (function () {
+      const yearEl = document.getElementById('year');
+      if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+      const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Nếu người dùng yêu cầu giảm chuyển động: hiển thị sẵn
+      if (prefersReducedMotion) {
+        document.querySelectorAll('[data-reveal]').forEach(el => el.classList.add('reveal-visible'));
+        document.getElementById('skillsWrap')?.classList.add('skills-animate');
+        return;
+      }
+
+      const revealEls = Array.from(document.querySelectorAll('[data-reveal]'));
+      const io = new IntersectionObserver((entries) => {
+        for (const e of entries) {
+          if (e.isIntersecting) {
+            e.target.classList.add('reveal-visible');
+            io.unobserve(e.target);
+          }
+        }
+      }, { threshold: 0.14 });
+
+      revealEls.forEach(el => io.observe(el));
+
+      // Progress bars skills: chỉ animate một lần khi vào view
+      const skillsWrap = document.getElementById('skillsWrap');
+      if (skillsWrap) {
+        const ioSkills = new IntersectionObserver((entries) => {
+          for (const e of entries) {
+            if (e.isIntersecting) {
+              skillsWrap.classList.add('skills-animate');
+              ioSkills.unobserve(skillsWrap);
+            }
+          }
+        }, { threshold: 0.22 });
+
+        ioSkills.observe(skillsWrap);
+      }
+    })();
+  </script>
+</body>
+</html>
